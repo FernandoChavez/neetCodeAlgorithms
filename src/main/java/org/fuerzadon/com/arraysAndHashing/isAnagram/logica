@@ -5,3 +5,15 @@ para el isAnagram2()
 
 La solucion e screar 2 hashmap y guardar como keys los chars que vaya iterando en el for en s y t respectivamente
 y como value guardar la cantidad de veces que repita un caracter, tratando de suma  +1 a su value actual
+
+map(letra, cantidad de repeticiones);
+
+
+s= "lamina" y t = "animal":
+
+Para s = "lamina", el mapa countS será:
+{l=1, a=2, m=1, i=1, n=1}
+Para t = "animal", el mapa countT será:
+{a=2, n=1, i=1, m=1, l=1}
+
+no importa el orden, si tiene exactamente los mismos keys con los mismos values, entonces son maps iguales

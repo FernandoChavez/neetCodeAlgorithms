@@ -5,6 +5,8 @@ import java.util.*;
 
 public class methods {
 
+
+    // (O(n^2 \cdot k)
     public static List<List<String>> groupAnagrams(String[] strs) {
 
         List<String> words = new ArrayList<>(Arrays.asList(strs));
@@ -51,6 +53,22 @@ public class methods {
         }
 
         return countS.equals(countT);
+    }
+
+
+
+    //O(m∗nlogn)
+    public static List<List<String>> groupAnagrams2(String[] strs) {
+        Map<String, List<String>> res = new HashMap<>();
+
+        for(String s : strs){
+            char[] charArray = s.toCharArray();
+            Arrays.sort(charArray);
+            String sortedS = new String(charArray);
+            res.putIfAbsent(sortedS, new ArrayList<>());
+            res.get(sortedS).add(s);
+        }
+        return new ArrayList<>(res.values());
     }
 
 }

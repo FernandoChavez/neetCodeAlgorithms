@@ -7,8 +7,8 @@ public class main {
         String words2[] = {"x"};
         String words3[] = {""};
 
-        System.out.println(methods.groupAnagrams(words));
-        System.out.println(methods.groupAnagrams(words2));
-        System.out.println(methods.groupAnagrams(words3));
+        System.out.println(methods.groupAnagrams2(words));
+        System.out.println(methods.groupAnagrams2(words2));
+        System.out.println(methods.groupAnagrams2(words3));
     }
 }
