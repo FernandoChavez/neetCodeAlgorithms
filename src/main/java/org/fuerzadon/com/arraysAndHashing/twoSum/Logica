@@ -1,0 +1,65 @@
+ https://neetcode.io/problems/two-integer-sum
+
+
+
+ Explicacion del sumTwo2
+
+
+ array2 = {1,,9, 11, 4,2}, target = 6
+
+ Se crea un hashmap para guardar como key, la diferencia de target - numero y como value, el index que fue
+ encontrado. Y asi sucesivamente hasta que encuentre un valor en el array que sumandolo con un numero ya existente
+ en el hashmap de el target. Ya si se cumple ese caso entonces se retorna
+
+
+
+
+ 1.- Inicialización:
+
+ prevMap comienza vacío: {}.
+
+
+ 2.-Iteración 1 (i = 0):
+
+ num = nums[0] = 1.
+ diff = target - num = 6 - 1 = 5.
+ prevMap.containsKey(5) es false (el mapa está vacío).
+ Se agrega 1 al mapa con su índice: prevMap = {1=0}.
+
+
+
+ 3.- Iteración 2 (i = 1):
+
+ num = nums[1] = 9.
+ diff = target - num = 6 - 9 = -3.
+ prevMap.containsKey(-3) es false (el mapa contiene {1=0}).
+ Se agrega 9 al mapa con su índice: prevMap = {1=0, 9=1}.
+
+
+ 4.-Iteración 3 (i = 2):
+
+ num = nums[2] = 11.
+ diff = target - num = 6 - 11 = -5.
+ prevMap.containsKey(-5) es false (el mapa contiene {1=0, 9=1}).
+ Se agrega 11 al mapa con su índice: prevMap = {1=0, 9=1, 11=2}.
+
+
+ 5.-Iteración 4 (i = 3):
+
+ num = nums[3] = 4.
+ diff = target - num = 6 - 4 = 2.
+ prevMap.containsKey(2) es false (el mapa contiene {1=0, 9=1, 11=2}).
+ Se agrega 4 al mapa con su índice: prevMap = {1=0, 9=1, 11=2, 4=3}.
+
+
+ 6.- Iteración 5 (i = 4):
+
+ num = nums[4] = 2.
+ diff = target - num = 6 - 2 = 4.
+ prevMap.containsKey(4) es true (el mapa contiene {1=0, 9=1, 11=2, 4=3}).
+ Se encuentra que 4 (en índice 3) y 2 (en índice 4) suman 6.
+ Retorna [3, 4].
+
+
+ Resultado:
+ El método retorna [3, 4], que son los índices de los números 4 y 2 que suman 6.

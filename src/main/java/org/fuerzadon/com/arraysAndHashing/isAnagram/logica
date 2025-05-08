@@ -1,0 +1,7 @@
+https://neetcode.io/problems/is-anagram
+
+
+para el isAnagram2()
+
+La solucion e screar 2 hashmap y guardar como keys los chars que vaya iterando en el for en s y t respectivamente
+y como value guardar la cantidad de veces que repita un caracter, tratando de suma  +1 a su value actual
