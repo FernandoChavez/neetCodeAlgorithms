@@ -54,10 +54,16 @@ public class methods {
         }
         int longest = 0;
 
+
         for(int num : numSet){
+            //Verificar si el número es el inicio de una secuencia:
+            //Si el número anterior (num - 1) no está en el conjunto, significa que num es el inicio de una nueva secuencia consecutiva
             if(!numSet.contains(num-1)){
                 int length = 1;
 
+                //Calcular la longitud de la secuencia consecutiva:
+                //Se utiliza un bucle para contar cuántos números consecutivos existen a partir de num.
+                //Por cada número consecutivo encontrado (num + length), se incrementa la longitud.
                 while(numSet.contains(num + length)){
                     length++;
                 }
